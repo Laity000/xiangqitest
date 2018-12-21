@@ -20,8 +20,9 @@ public class App
 	
 	static String path = "resources\\chromedriver.exe";
 	public static void main(String[] args) throws InterruptedException {
-		//设置
+		//09:00:00开始登记
 		showTimer(9, 0, 0, 1);
+		//09:00:01再次开始登记
 		showTimer(9, 0, 1, 2);
 		//showTimer(9, 0, 2, 3);
 		
@@ -49,8 +50,10 @@ public class App
 		WebElement call = driver.findElement(By.xpath("//*[@id=\"202474906\"]/div[2]/div/div/input"));
 		WebElement button = driver.findElement(By.id("form_submit"));
 		
-		name.sendKeys("张径");
-		call.sendKeys("18326656870");
+		//需要修改的姓名
+		name.sendKeys("张三");
+		//需要自己的手机号
+		call.sendKeys("18300000000");
 		button.click();
 		
 		//检查结果
